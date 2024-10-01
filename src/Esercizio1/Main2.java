@@ -19,10 +19,8 @@ public class Main2 {
         System.out.println("Inserisci " + numeroElementi + " parole:");
         for (int i = 0; i < numeroElementi; i++) {
             String parola = scanner.nextLine();
-            if (paroleDistinte.contains(parola)) { // Se la parola è già presente
+            if (!paroleDistinte.add(parola)) {
                 paroleDuplicate.add(parola);      // Aggiungila a paroleDuplicate
-            } else {
-                paroleDistinte.add(parola);       // Altrimenti, aggiungila a paroleDistinte
             }
         }
 
